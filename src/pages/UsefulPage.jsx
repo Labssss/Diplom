@@ -45,7 +45,6 @@ export function UsefulPage() {
           return response.json();
       })
       .then(data => {
-          console.log(data)
           setUsefuls(data);
       });
   }

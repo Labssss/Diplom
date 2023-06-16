@@ -45,7 +45,6 @@ export function TodoPage() {
                 return response.json();
             })
             .then(data => {
-                console.log(data)
                 setTodos(data);
             });
         }

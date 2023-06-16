@@ -44,7 +44,6 @@ export function ProjectsPage() {
                 return response.json();
             })
             .then(data => {
-                console.log(data)
                 setProjects(data);
             });
         }
