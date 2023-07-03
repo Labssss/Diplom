@@ -12,7 +12,6 @@ class TodoListController {
             const user_id = req.user.id
             const {complete_date, title, description} = req.body
             const {rows: [newTodoList, ...any]}  = await db.query('INSERT INTO api.todolist (user_id, complete_date, title, description) values ($1, $2, $3, $4) RETURNING id, complete_date, title, description', [user_id, complete_date, title, description])
-            res.json(newTodoList)
         } catch (e) {
             console.log(e)
             res.status(400).json({message: 'Creation todolist error'})
