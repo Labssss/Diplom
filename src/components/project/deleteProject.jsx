@@ -6,7 +6,7 @@ export function DeleteProject(props) {
     const [error, setError] = useState('')
     
     const confirmHandler = async (event) => {
-        await fetch(`http://localhost:3001/api/projects/${props.id}`, {
+        await fetch(`https://${process.env.REACT_APP_DOMAIN}:3001/api/projects/${props.id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',

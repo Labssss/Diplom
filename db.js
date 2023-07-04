@@ -1,10 +1,13 @@
 const Pool = require('pg').Pool
+// require('dotenv').config({ path: `.env.local`, override: true })
+
 const pool = new Pool({
-  user: 'api_diplom',
-  host: 'localhost',
-  database: 'diplom',
-  password: 'root',
-  port: 5432,
+  user: process.env.DB_USER,
+  host: process.env.DB_HOST,
+  database: process.env.DB_NAME,
+  password: process.env.DB_PASS,
+  port: process.env.DB_PORT,
+  ssl: true
 });
 
 module.exports = pool

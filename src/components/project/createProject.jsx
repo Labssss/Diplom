@@ -16,7 +16,7 @@ export function CreateProject(props) {
             setError('')
         }
 
-        await fetch('http://localhost:3001/api/projects/', {
+        await fetch(`https://${process.env.REACT_APP_DOMAIN}:3001/api/projects/`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

@@ -28,7 +28,7 @@ export function ProjectsPage() {
     }, []);
 
     function getProjects() {
-        fetch('http://localhost:3001/api/projects/',{
+        fetch(`https://${process.env.REACT_APP_DOMAIN}:3001/api/projects/`,{
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

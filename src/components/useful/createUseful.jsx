@@ -22,7 +22,7 @@ export function CreateUseful(props) {
             setError('')
         }
 
-        await fetch('http://localhost:3001/api/useful', {
+        await fetch(`https://${process.env.REACT_APP_DOMAIN}:3001/api/useful`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

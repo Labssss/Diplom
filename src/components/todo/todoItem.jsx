@@ -17,7 +17,7 @@ export function TodoItem(props) {
     }
     
     const deleteHandler = async () => {
-        await fetch(`http://localhost:3001/api/todolist/${props.data.id}`, {
+        await fetch(`https://${process.env.REACT_APP_DOMAIN}:3001/api/todolist/${props.data.id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',

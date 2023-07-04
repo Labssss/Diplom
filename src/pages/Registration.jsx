@@ -12,7 +12,7 @@ export function Registration () {
     const navigate = useNavigate();
 
     const registerUser = async (data) => {
-        await fetch('http://localhost:3001/auth/registration/', {
+        await fetch(`https://${process.env.REACT_APP_DOMAIN}:3001/auth/registration/`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

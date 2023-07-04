@@ -29,7 +29,7 @@ export function UsefulPage() {
   }
 
   async function getUsefuls() {
-    await fetch('http://localhost:3001/api/useful', {
+    await fetch(`https://${process.env.REACT_APP_DOMAIN}:3001/api/useful`, {
       method: 'GET',
       headers: {
           'Content-Type': 'application/json',

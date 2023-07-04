@@ -23,7 +23,7 @@ export function EditUseful(props) {
             setError('')
         }
 
-        await fetch('http://localhost:3001/api/useful', {
+        await fetch(`https://${process.env.REACT_APP_DOMAIN}:3001/api/useful`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

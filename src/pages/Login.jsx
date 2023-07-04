@@ -5,7 +5,6 @@ import {CustomContext} from "../Context";
 
 
 
-
 export function Login() {
 
     const {setUser, grantRole, setIsLogged} = useContext(CustomContext);
@@ -13,7 +12,7 @@ export function Login() {
     const navigate = useNavigate();
 
     const loginUser = async (data) => {
-        await fetch('http://localhost:3001/auth/login/', {
+        await fetch(`https://${process.env.REACT_APP_DOMAIN}:3001/auth/login/`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

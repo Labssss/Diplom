@@ -17,7 +17,7 @@ export function CreateTodoItem(props) {
             setError('')
         }
 
-        await fetch('http://localhost:3001/api/todolist/', {
+        await fetch(`https://${process.env.REACT_APP_DOMAIN}:3001/api/todolist/`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

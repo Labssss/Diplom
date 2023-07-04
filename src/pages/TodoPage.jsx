@@ -29,7 +29,7 @@ export function TodoPage() {
     }, []);
 
     function getTodo() {
-        fetch('http://localhost:3001/api/todolist/', {
+        fetch(`https://${process.env.REACT_APP_DOMAIN}:3001/api/todolist/`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
